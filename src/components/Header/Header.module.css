@@ -1,5 +1,5 @@
 .header {
-    width: 1440px;
+    min-width: 1440px;
     padding: 20px;
     background-color: #475467;
 }
@@ -13,6 +13,6 @@
 
 .link:hover,
 .link:focus {
-    color: #D84343;
+    color: #cf2a2a;
     transform: scale(1.1);
 }

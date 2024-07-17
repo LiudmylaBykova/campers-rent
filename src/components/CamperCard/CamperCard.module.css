@@ -1,0 +1,80 @@
+.card {
+    display: flex;
+    gap: 24px;
+    width: 888px;
+    height: 358px;
+    padding: 24px;
+    border: 1px solid #10182833;
+    border-radius: 20px;
+}
+
+.img {
+    border-radius: 10px;
+    background-color: #475467;
+    object-fit: cover;
+}
+
+.descriptionWrap {
+    width: 526px;
+}
+
+.nameWrap {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.name {
+    max-width: 339px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-right: auto;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.likeBtn {
+    display: flex;
+    background-color: transparent;
+}
+
+.locationWrap {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.iconSpan {
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    width: 520px;
+    height: 24px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.detailsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.detailsSpan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 18px;
+    background-color: #F2F4F7;
+    border-radius: 100px;
+}

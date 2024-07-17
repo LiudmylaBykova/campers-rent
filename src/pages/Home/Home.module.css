@@ -1,5 +1,5 @@
 .section {
-    width: 1440px;
+    min-width: 1440px;
     background-color: #F2F4F7;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,9 +12,31 @@
     padding: 600px 30px 30px 30px;
 }
 
+.titleWrap {
+    width: 400px;
+}
+
+.title {
+    font-size: 36px;
+    color: #101828;
+}
+
+.titleSpan {
+    color: #E44848;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #E44848;
+}
+
 .linkWrap {
     display: flex;
     gap: 10px;
+    justify-content: flex-end;
 }
 
 .link {
@@ -26,4 +48,10 @@
     color: #fff;
     padding: 16px 60px;
     background-color: #E44848;
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover,
+.link:focus {
+    background-color: #cf2a2a;
 }
