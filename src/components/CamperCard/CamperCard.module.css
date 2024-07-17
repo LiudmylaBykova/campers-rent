@@ -98,4 +98,10 @@
     color: #fff;
     background-color: #E44848;
     border-radius: 200px;
+    transition: all 0.3s ease-in-out;
+}
+
+.showMoreBtn:hover,
+.showMoreBtn:focus {
+    background-color: #cf2a2a;
 }
