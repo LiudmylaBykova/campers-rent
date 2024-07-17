@@ -9,6 +9,7 @@ import { getAllCampers } from "../../redux/campersOps";
 import CamperCard from "../../components/CamperCard/CamperCard";
 
 import css from "../Catalog/Catalog.module.css";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 const Catalog = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const Catalog = () => {
 
   return (
     <div className={css.section}>
+      <SearchBar />
       {campers && campers.length > 0 ? (
         <ul className={css.list}>
           {campers.map((camper) => (

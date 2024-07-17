@@ -1,5 +1,6 @@
 .section {
     min-width: 1440px;
+    height: 650px;
     background-color: #F2F4F7;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,11 +10,15 @@
 }
 
 .container {
-    padding: 600px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px;
 }
 
 .titleWrap {
     width: 400px;
+    margin-top: auto;
 }
 
 .title {

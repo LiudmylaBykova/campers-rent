@@ -2,7 +2,7 @@
     display: flex;
     gap: 24px;
     width: 888px;
-    height: 358px;
+    /* height: 358px; */
     padding: 24px;
     border: 1px solid #10182833;
     border-radius: 20px;
@@ -27,10 +27,12 @@
 
 .name {
     max-width: 339px;
+    height: 30px;
     font-size: 24px;
     font-weight: 600;
     line-height: 1.25;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .price {
@@ -68,13 +70,32 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-bottom: 24px;
 }
 
 .detailsSpan {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 16px 18px;
+    padding: 14px 18px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 500;
     background-color: #F2F4F7;
     border-radius: 100px;
+}
+
+.svg {
+    stroke: #475467;
+}
+
+.showMoreBtn {
+    width: 166px;
+    height: 56px;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #E44848;
+    border-radius: 200px;
 }

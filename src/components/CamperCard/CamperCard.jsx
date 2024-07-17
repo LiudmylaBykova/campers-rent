@@ -27,22 +27,22 @@ const CamperCard = ({ camper }) => {
       <div className={css.descriptionWrap}>
         <div className={css.nameWrap}>
           <h2 className={css.name}>{camper.name}</h2>
-          <p className={css.price}>Є {camper.price}. 00</p>
+          <p className={css.price}>€{camper.price}, 00</p>
           <button className={css.likeBtn}>
-            <svg width="24" height="24">
+            <svg className={css.svg} width="24" height="24">
               <use href={`${iconHurt}#icon-hurt`}></use>
             </svg>
           </button>
         </div>
         <div className={css.locationWrap}>
           <span className={css.iconSpan}>
-            <svg width="16" height="16">
+            <svg className={css.svg} width="16" height="16">
               <use href={`${iconStar}#icon-star`}></use>
             </svg>
-            {camper.rating}({camper.revievs})
+            {camper.rating}({camper.revievs} Reviews)
           </span>
           <span className={css.iconSpan}>
-            <svg width="16" height="16">
+            <svg className={css.svg} width="16" height="16">
               <use href={`${iconLocation}#icon-map-pin`}></use>
             </svg>
             {camper.location}
@@ -51,42 +51,43 @@ const CamperCard = ({ camper }) => {
         <p className={css.description}>{camper.description}</p>
         <div className={css.detailsWrap}>
           <span className={css.detailsSpan}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="20" height="20">
               <use href={`${iconUsers}#icon-Users`}></use>
             </svg>
             {camper.adults} Adolts
           </span>
           <span className={css.detailsSpan}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="20" height="20">
               <use href={`${iconAutomatic}#icon-Container`}></use>
             </svg>
             Automatic
           </span>
           <span className={css.detailsSpan}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="20" height="20">
               <use href={`${iconPetrol}#icon-petrol`}></use>
             </svg>
             Petrol
           </span>
           <span className={css.detailsSpan}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="20" height="20">
               <use href={`${iconKitchen}#icon-kitchen`}></use>
             </svg>
             Kitchen
           </span>
           <span className={css.detailsSpan}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="20" height="20">
               <use href={`${iconBad}#icon-bad`}></use>
             </svg>
             {camper.details.beds} Bad
           </span>
           <span className={css.detailsSpan}>
-            <svg width="20" height="20">
-              <use href={`${iconAC}#icon-air-conditioner`}></use>
+            <svg className={css.svg} width="20" height="20">
+              <use href={`${iconAC}#icon-wind`}></use>
             </svg>
             AC
           </span>
         </div>
+        <button className={css.showMoreBtn}>Show more</button>
       </div>
     </div>
   );
