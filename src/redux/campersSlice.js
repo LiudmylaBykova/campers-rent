@@ -3,6 +3,7 @@ import { getAllCampers } from "./campersOps";
 
 const initialState = {
   campers: [],
+  campersFavorites: [],
   isLoading: false,
   isError: false,
 };
@@ -20,6 +21,17 @@ const campersSlice = createSlice({
   name: "campers",
   initialState: initialState,
 
+  reducers: {
+    addFavorites(state, action) {
+      state.campersFavorites.push(action.payload);
+    },
+    deleteFavorites(state, action) {
+      state.campersFavorites = state.campersFavorites.filter(
+        (camper) => camper.id !== action.payload.id
+      );
+    },
+  },
+
   extraReducers: (builder) => {
     builder
       .addCase(getAllCampers.pending, handlePending)
@@ -33,3 +45,4 @@ const campersSlice = createSlice({
 });
 
 export const campersReducer = campersSlice.reducer;
+export const { addFavorites, deleteFavorites } = campersSlice.actions;

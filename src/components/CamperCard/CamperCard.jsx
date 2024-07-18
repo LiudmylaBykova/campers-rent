@@ -1,19 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-import iconHurt from "../../img/icons.svg";
-import iconStar from "../../img/icons.svg";
-import iconLocation from "../../img/icons.svg";
-import iconUsers from "../../img/icons.svg";
-import iconAutomatic from "../../img/icons.svg";
-import iconPetrol from "../../img/icons.svg";
-import iconKitchen from "../../img/icons.svg";
-import iconBad from "../../img/icons.svg";
-import iconAC from "../../img/icons.svg";
-
+import icon from "../../img/icons.svg";
 import css from "../CamperCard/CamperCard.module.css";
 
 const CamperCard = ({ camper }) => {
   console.log(camper);
+
+  const handleOnLikeBtnClik = () => {
+    setIsFaforite((camper.isFavorite = true));
+  };
   return (
     <div className={css.card}>
       <img
@@ -28,22 +23,32 @@ const CamperCard = ({ camper }) => {
         <div className={css.nameWrap}>
           <h2 className={css.name}>{camper.name}</h2>
           <p className={css.price}>€{camper.price}, 00</p>
-          <button className={css.likeBtn}>
-            <svg className={css.svg} width="24" height="24">
-              <use href={`${iconHurt}#icon-hurt`}></use>
+          <button
+            className={css.likeBtn}
+            type="button"
+            onClick={handleOnLikeBtnClik}
+          >
+            <svg
+              className={camper.isFavorite ? css.svg : css.svgFavorite}
+              width="24"
+              height="24"
+            >
+              <use href={`${icon}#icon-hurt`}></use>
             </svg>
           </button>
         </div>
         <div className={css.locationWrap}>
-          <span className={css.iconSpan}>
+          <div className={css.reviewWrap}>
+            <span className={css.reviews}>
+              <svg className={css.svg} width="16" height="16">
+                <use href={`${icon}#icon-star`}></use>
+              </svg>
+              {camper.rating}({camper.reviews.length} Reviews)
+            </span>
+          </div>
+          <span className={css.location}>
             <svg className={css.svg} width="16" height="16">
-              <use href={`${iconStar}#icon-star`}></use>
-            </svg>
-            {camper.rating}({camper.revievs} Reviews)
-          </span>
-          <span className={css.iconSpan}>
-            <svg className={css.svg} width="16" height="16">
-              <use href={`${iconLocation}#icon-map-pin`}></use>
+              <use href={`${icon}#icon-map-pin`}></use>
             </svg>
             {camper.location}
           </span>
@@ -52,37 +57,37 @@ const CamperCard = ({ camper }) => {
         <div className={css.detailsWrap}>
           <span className={css.detailsSpan}>
             <svg className={css.svg} width="20" height="20">
-              <use href={`${iconUsers}#icon-Users`}></use>
+              <use href={`${icon}#icon-Users`}></use>
             </svg>
             {camper.adults} Adolts
           </span>
           <span className={css.detailsSpan}>
             <svg className={css.svg} width="20" height="20">
-              <use href={`${iconAutomatic}#icon-Container`}></use>
+              <use href={`${icon}#icon-Container`}></use>
             </svg>
             Automatic
           </span>
           <span className={css.detailsSpan}>
             <svg className={css.svg} width="20" height="20">
-              <use href={`${iconPetrol}#icon-petrol`}></use>
+              <use href={`${icon}#icon-petrol`}></use>
             </svg>
             Petrol
           </span>
           <span className={css.detailsSpan}>
             <svg className={css.svg} width="20" height="20">
-              <use href={`${iconKitchen}#icon-kitchen`}></use>
+              <use href={`${icon}#icon-kitchen`}></use>
             </svg>
             Kitchen
           </span>
           <span className={css.detailsSpan}>
             <svg className={css.svg} width="20" height="20">
-              <use href={`${iconBad}#icon-bad`}></use>
+              <use href={`${icon}#icon-bad`}></use>
             </svg>
             {camper.details.beds} Bad
           </span>
           <span className={css.detailsSpan}>
             <svg className={css.svg} width="20" height="20">
-              <use href={`${iconAC}#icon-wind`}></use>
+              <use href={`${icon}#icon-wind`}></use>
             </svg>
             AC
           </span>

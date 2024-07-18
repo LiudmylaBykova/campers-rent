@@ -26,6 +26,7 @@
 }
 
 .name {
+    color: #101828;
     max-width: 339px;
     height: 30px;
     font-size: 24px;
@@ -36,6 +37,7 @@
 }
 
 .price {
+    color: #101828;
     font-size: 24px;
     font-weight: 600;
     line-height: 1.25;
@@ -46,13 +48,34 @@
     background-color: transparent;
 }
 
+.svg {
+    stroke: #101828;
+}
+
+.svgFavorite {
+    fill: #E44848;
+}
+
 .locationWrap {
     display: flex;
     gap: 16px;
     margin-bottom: 24px;
 }
 
-.iconSpan {
+.reviewWrap {
+    border-bottom: 1px solid black;
+}
+
+.reviews {
+    color: #101828;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+}
+
+.location {
+    color: #101828;
     font-size: 16px;
     line-height: 1.5;
     display: flex;
@@ -60,9 +83,12 @@
 }
 
 .description {
+    color: #475467;
     width: 520px;
     height: 24px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     margin-bottom: 24px;
 }
 
@@ -74,6 +100,7 @@
 }
 
 .detailsSpan {
+    color: #101828;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -83,10 +110,6 @@
     font-weight: 500;
     background-color: #F2F4F7;
     border-radius: 100px;
-}
-
-.svg {
-    stroke: #475467;
 }
 
 .showMoreBtn {
