@@ -1,13 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import icon from "../../img/icons.svg";
+import icon from "../../assets/icons.svg";
 import css from "../CamperCard/CamperCard.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCampersFavorites } from "../../redux/selectors";
+import { addFavorites, deleteFavorites } from "../../redux/campersSlice";
 
 const CamperCard = ({ camper }) => {
   console.log(camper);
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectCampersFavorites);
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    setIsActive(favorites.some((item) => item._id === camper._id));
+  }, [favorites, camper._id]);
 
   const handleOnLikeBtnClik = () => {
-    setIsFaforite((camper.isFavorite = true));
+    if (isActive) {
+      dispatch(deleteFavorites(camper._id));
+    } else {
+      dispatch(addFavorites(camper));
+    }
+    setIsActive(!isActive);
   };
   return (
     <div className={css.card}>
@@ -29,7 +44,7 @@ const CamperCard = ({ camper }) => {
             onClick={handleOnLikeBtnClik}
           >
             <svg
-              className={camper.isFavorite ? css.svg : css.svgFavorite}
+              className={!isActive ? "" : css.svgFavorite}
               width="24"
               height="24"
             >
@@ -40,15 +55,15 @@ const CamperCard = ({ camper }) => {
         <div className={css.locationWrap}>
           <div className={css.reviewWrap}>
             <span className={css.reviews}>
-              <svg className={css.svg} width="16" height="16">
+              <svg width="24" height="24">
                 <use href={`${icon}#icon-star`}></use>
               </svg>
               {camper.rating}({camper.reviews.length} Reviews)
             </span>
           </div>
           <span className={css.location}>
-            <svg className={css.svg} width="16" height="16">
-              <use href={`${icon}#icon-map-pin`}></use>
+            <svg width="16" height="16">
+              <use href={`${icon}#icon-map`}></use>
             </svg>
             {camper.location}
           </span>
@@ -56,37 +71,37 @@ const CamperCard = ({ camper }) => {
         <p className={css.description}>{camper.description}</p>
         <div className={css.detailsWrap}>
           <span className={css.detailsSpan}>
-            <svg className={css.svg} width="20" height="20">
-              <use href={`${icon}#icon-Users`}></use>
+            <svg width="20" height="20">
+              <use href={`${icon}#icon-users`}></use>
             </svg>
             {camper.adults} Adolts
           </span>
           <span className={css.detailsSpan}>
-            <svg className={css.svg} width="20" height="20">
+            <svg width="20" height="20">
               <use href={`${icon}#icon-Container`}></use>
             </svg>
             Automatic
           </span>
           <span className={css.detailsSpan}>
-            <svg className={css.svg} width="20" height="20">
+            <svg width="20" height="20">
               <use href={`${icon}#icon-petrol`}></use>
             </svg>
             Petrol
           </span>
           <span className={css.detailsSpan}>
-            <svg className={css.svg} width="20" height="20">
+            <svg width="20" height="20">
               <use href={`${icon}#icon-kitchen`}></use>
             </svg>
             Kitchen
           </span>
           <span className={css.detailsSpan}>
-            <svg className={css.svg} width="20" height="20">
+            <svg width="20" height="20">
               <use href={`${icon}#icon-bad`}></use>
             </svg>
             {camper.details.beds} Bad
           </span>
           <span className={css.detailsSpan}>
-            <svg className={css.svg} width="20" height="20">
+            <svg width="20" height="20">
               <use href={`${icon}#icon-wind`}></use>
             </svg>
             AC

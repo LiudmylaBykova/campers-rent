@@ -15,7 +15,7 @@ import {
 const favoritesPersistConfig = {
   key: "campers",
   storage,
-  whitelist: ["favorites"],
+  whitelist: ["campersFavorites"],
 };
 
 export const store = configureStore({

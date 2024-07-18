@@ -5,7 +5,8 @@
 }
 
 .link {
-    display: inline-block;
+    display: flex;
+    gap: 10px;
     font-size: 26px;
     font-weight: 700;
     color: #E44848;
@@ -15,5 +16,14 @@
 .link:hover,
 .link:focus {
     color: #cf2a2a;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+}
+
+.span {
+    display: flex;
+    align-items: center;
+}
+
+.svg {
+    stroke: #cf2a2a;
 }

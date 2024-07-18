@@ -2,7 +2,6 @@
     display: flex;
     gap: 24px;
     width: 888px;
-    /* height: 358px; */
     padding: 24px;
     border: 1px solid #10182833;
     border-radius: 20px;
@@ -16,6 +15,7 @@
 
 .descriptionWrap {
     width: 526px;
+    text-align: left;
 }
 
 .nameWrap {
@@ -46,10 +46,6 @@
 .likeBtn {
     display: flex;
     background-color: transparent;
-}
-
-.svg {
-    stroke: #101828;
 }
 
 .svgFavorite {
