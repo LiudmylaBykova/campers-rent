@@ -1,8 +1,12 @@
 .section {
-    min-height: 700px;
-    padding: 64px;
     margin: 0 auto;
-    text-align: center;
+}
+
+.container {
+    width: 1312px;
+    min-height: 700px;
+    padding: 64px 0;
+    margin: 0 auto;
 }
 
 .text {

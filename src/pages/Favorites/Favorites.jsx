@@ -10,11 +10,13 @@ const Favorites = () => {
   console.log(favorites);
   return (
     <div className={css.section}>
-      {favorites.length !== 0 ? (
-        <CampersList campers={favorites} />
-      ) : (
-        <p className={css.text}>Favorites is empty</p>
-      )}
+      <div className={css.container}>
+        {favorites.length !== 0 ? (
+          <CampersList campers={favorites} />
+        ) : (
+          <p className={css.text}>Favorites is empty</p>
+        )}
+      </div>
     </div>
   );
 };

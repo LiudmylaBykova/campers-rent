@@ -6,8 +6,10 @@ import css from "../Catalog/Catalog.module.css";
 const Catalog = () => {
   return (
     <div className={css.section}>
-      <SearchBar />
-      <CampersList />
+      <div className={css.container}>
+        <SearchBar />
+        <CampersList />
+      </div>
     </div>
   );
 };
