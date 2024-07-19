@@ -13,7 +13,7 @@ const Favorites = () => {
       {favorites.length !== 0 ? (
         <CampersList campers={favorites} />
       ) : (
-        <p>Favorites is empty</p>
+        <p className={css.text}>Favorites is empty</p>
       )}
     </div>
   );

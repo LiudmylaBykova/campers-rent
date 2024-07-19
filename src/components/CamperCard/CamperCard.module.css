@@ -48,6 +48,10 @@
     background-color: transparent;
 }
 
+.csg {
+    stroke: #101828;
+}
+
 .svgFavorite {
     fill: #E44848;
 }

@@ -48,14 +48,18 @@ const CamperCard = ({ camper }) => {
               width="24"
               height="24"
             >
-              <use href={`${icon}#icon-hurt`}></use>
+              {!isActive ? (
+                <use href={`${icon}#icon-hurt`}></use>
+              ) : (
+                <use href={`${icon}#icon-hurt2`}></use>
+              )}
             </svg>
           </button>
         </div>
         <div className={css.locationWrap}>
           <div className={css.reviewWrap}>
             <span className={css.reviews}>
-              <svg width="24" height="24">
+              <svg className={css.svg} width="24" height="24">
                 <use href={`${icon}#icon-star`}></use>
               </svg>
               {camper.rating}({camper.reviews.length} Reviews)
