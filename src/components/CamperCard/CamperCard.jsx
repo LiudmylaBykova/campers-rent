@@ -82,7 +82,7 @@ const CamperCard = ({ camper }) => {
           </span>
           <span className={css.detailsSpan}>
             <svg width="20" height="20">
-              <use href={`${icon}#icon-Container`}></use>
+              <use href={`${icon}#icon-automatic`}></use>
             </svg>
             Automatic
           </span>
