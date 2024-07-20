@@ -63,9 +63,13 @@
     margin-bottom: 24px;
 }
 
-.img {
+imgWrap {
     width: 290px;
     height: 310px;
+}
+
+.img {
+    min-width: 100%;
     border-radius: 10px;
     background-color: #475467;
     object-fit: cover;

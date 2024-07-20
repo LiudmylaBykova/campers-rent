@@ -29,13 +29,16 @@ const CamperDetails = ({ camper, id }) => {
       <ul className={css.imgList}>
         {camper.gallery.map((item, index) => (
           <li key={index}>
-            <img
-              className={css.img}
-              src={item}
-              alt={camper.name}
-              width={290}
-              height={310}
-            />
+            <div className={css.imgWrap}>
+              {" "}
+              <img
+                className={css.img}
+                src={item}
+                alt={camper.name}
+                width={290}
+                height={310}
+              />
+            </div>
           </li>
         ))}
       </ul>
