@@ -15,7 +15,7 @@ const Features = ({ camper }) => {
               <svg width="20" height="20">
                 <use href={`${icon}#icon-users`}></use>
               </svg>
-              Adults
+              {camper.adults} Adults
             </span>
           </li>
           <li>
@@ -55,7 +55,7 @@ const Features = ({ camper }) => {
               <svg width="20" height="20">
                 <use href={`${icon}#icon-bad`}></use>
               </svg>
-              Bads
+              {camper.details.beds} Bads
             </span>
           </li>
           <li>
@@ -63,7 +63,7 @@ const Features = ({ camper }) => {
               <svg width="20" height="20">
                 <use href={`${icon}#icon-air-conditioner`}></use>
               </svg>
-              Air Conditioner
+              {camper.details.airConditioner} Air Conditioner
             </span>
           </li>
           <li>
@@ -87,12 +87,14 @@ const Features = ({ camper }) => {
               <svg width="20" height="20">
                 <use href={`${icon}#icon-plate`}></use>
               </svg>
-              Hob
+              {camper.details.hob} Hob
             </span>
           </li>
         </ul>
         <div>
-          <h2 className={css.title}>Vehicle details</h2>
+          <div className={css.titleWrap}>
+            <h2 className={css.title}>Vehicle details</h2>
+          </div>
           <div className={css.detailsItem}>
             <span className={css.detailsSpan}>Form</span>
             <span className={css.detailsSpan}>Panel truck</span>
@@ -120,7 +122,6 @@ const Features = ({ camper }) => {
             </li>
           </ul>
         </div>
-        <div className={css.featuresDetails}></div>
       </div>
       <BookingForm />
     </div>

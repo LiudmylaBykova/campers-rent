@@ -8,8 +8,6 @@
 .featuresWrap {
     width: 448px;
     height: 532px;
-    padding: 24px;
-
 }
 
 .featuresList {
@@ -32,6 +30,11 @@
     border-radius: 100px;
 }
 
+.titleWrap {
+    border-bottom: 1px solid #1018281A;
+    margin-bottom: 24px;
+}
+
 .title {
     font-size: 20px;
     font-weight: 600;
@@ -48,5 +51,5 @@
     font-size: 18px;
     font-weight: 500;
     color: #101828;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 }

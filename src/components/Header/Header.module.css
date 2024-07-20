@@ -32,7 +32,6 @@
 .link:hover,
 .link:focus {
     color: #cf2a2a;
-    /* transform: scale(1.1); */
 }
 
 .span {
@@ -42,4 +41,10 @@
 
 .svg {
     stroke: #cf2a2a;
+}
+
+.amount {
+    color: #fafafa;
+    font-size: 18px;
+    font-weight: 500;
 }

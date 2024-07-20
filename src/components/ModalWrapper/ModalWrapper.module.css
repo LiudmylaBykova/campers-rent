@@ -38,3 +38,8 @@
     stroke: #2f2f2f;
     transition: 0.3s ease-in-out;
 }
+
+.icon:hover,
+.icon:focus {
+    stroke: #E44848;
+}

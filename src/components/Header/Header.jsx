@@ -1,11 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
+import { selectCampersFavorites } from "../../redux/selectors";
 import icon from "../../assets/icons.svg";
 
 import css from "../Header/Header.module.css";
-import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const favorites = useSelector(selectCampersFavorites);
   return (
     <header className={css.header}>
       <nav className={css.navList}>
@@ -20,6 +23,7 @@ const Header = () => {
         </NavLink>
         <NavLink to="/favorites" className={css.link}>
           Favorites
+          <span className={css.amount}>{favorites.length} </span>
         </NavLink>
       </nav>
     </header>
