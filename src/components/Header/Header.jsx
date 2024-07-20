@@ -23,7 +23,11 @@ const Header = () => {
         </NavLink>
         <NavLink to="/favorites" className={css.link}>
           Favorites
-          <span className={css.amount}>{favorites.length} </span>
+          {favorites.length > 0 ? (
+            <span className={css.amount}>{favorites.length} </span>
+          ) : (
+            ""
+          )}
         </NavLink>
       </nav>
     </header>

@@ -20,6 +20,7 @@
 }
 
 .link {
+    position: relative;
     display: flex;
     gap: 10px;
     font-size: 26px;
@@ -44,7 +45,9 @@
 }
 
 .amount {
+    position: absolute;
+    right: -12px;
     color: #fafafa;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
