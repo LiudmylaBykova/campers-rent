@@ -6,14 +6,17 @@ import CamperDetails from "../CamperDetails/CamperDetails";
 import { useDispatch, useSelector } from "react-redux";
 import { selectModalState } from "../../redux/modal/selector";
 import { closeModal } from "../../redux/modal/slice";
-import { useState } from "react";
 
 Modal.setAppElement("#root");
 
-export default function ModalWrapper({ isOpen, camper, children }) {
+export default function ModalWrapper({ camper }) {
+  const dispatch = useDispatch();
+  const { isOpen } = useSelector(selectModalState);
+
   const handleClose = () => {
-    isOpen = false;
+    dispatch(closeModal());
   };
+
   return (
     <Modal
       isOpen={isOpen}
@@ -32,8 +35,6 @@ export default function ModalWrapper({ isOpen, camper, children }) {
           <use href={`${icon}#icon-close`}></use>
         </svg>
       </button>
-
-      {/* {children} */}
       <CamperDetails camper={camper} />
     </Modal>
   );

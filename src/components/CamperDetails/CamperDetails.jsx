@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 import icon from "../../assets/icons.svg";
 import css from "../CamperDetails/CamperDetails.module.css";
+import Features from "../Features/Features";
+import Reviews from "../Reviews/Reviews";
 
-const CamperDetails = ({ camper, id }) => {
+const CamperDetails = ({ camper }) => {
+  const [isActive, setIsActive] = useState("features");
+
+  const handleLinkClick = (component) => {
+    setIsActive(component);
+  };
   return (
     <div className={css.card}>
       <div className={css.titleWrap}>
@@ -45,9 +52,27 @@ const CamperDetails = ({ camper, id }) => {
       <p className={css.description}>{camper.description}</p>
       <div className={css.detailsContainer}>
         <div className={css.detailsWrap}>
-          <span className={css.detailsInfo}>Feautures </span>
-          <span className={css.detailsInfo}>Reviews</span>
+          <button
+            type="button"
+            className={
+              isActive === "features" ? css.detailsInfoActive : css.detailsInfo
+            }
+            onClick={() => handleLinkClick("features")}
+          >
+            Feautures
+          </button>
+          <button
+            type="button"
+            className={
+              isActive === "reviews" ? css.detailsInfoActive : css.detailsInfo
+            }
+            onClick={() => handleLinkClick("reviews")}
+          >
+            Reviews
+          </button>
         </div>
+        {isActive === "features" && <Features camper={camper} />}
+        {isActive === "reviews" && <Reviews camper={camper} />}
       </div>
     </div>
   );

@@ -1,0 +1,52 @@
+.featuresContainer {
+    display: flex;
+    width: 902px;
+    height: 532px;
+    gap: 24px;
+}
+
+.featuresWrap {
+    width: 448px;
+    height: 532px;
+    padding: 24px;
+
+}
+
+.featuresList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 44px;
+}
+
+.span {
+    color: #101828;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #F2F4F7;
+    border-radius: 100px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #101828;
+    margin-bottom: 24px;
+}
+
+.detailsItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailsSpan {
+    font-size: 18px;
+    font-weight: 500;
+    color: #101828;
+    margin-bottom: 11px;
+}

@@ -12,7 +12,6 @@ const CamperCard = ({ camper }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectCampersFavorites);
   const [isActive, setIsActive] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     setIsActive(favorites.some((item) => item._id === camper._id));
@@ -28,8 +27,7 @@ const CamperCard = ({ camper }) => {
   };
 
   const showModal = () => {
-    setIsModalOpen(true);
-    // dispatch(openModal());
+    dispatch(openModal());
   };
   return (
     <div className={css.card}>
@@ -122,7 +120,7 @@ const CamperCard = ({ camper }) => {
           Show more
         </button>
       </div>
-      <ModalWrapper camper={camper} isOpen={isModalOpen} />
+      <ModalWrapper camper={camper} />
     </div>
   );
 };
