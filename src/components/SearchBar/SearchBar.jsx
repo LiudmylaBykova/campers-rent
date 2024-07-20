@@ -2,11 +2,21 @@ import React from "react";
 
 import icon from "../../assets/icons.svg";
 import css from "../SearchBar/SearchBar.module.css";
+import { useForm } from "react-hook-form";
 
 const SearchBar = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const handleSearchBtnSubmit = (values, actions) => {
+    // ===
+  };
   return (
     <div className={css.searchContainer}>
-      <form className={css.form}>
+      <form onSubmit={handleSubmit(handleSearchBtnSubmit)} className={css.form}>
         <p className={css.location}> Location</p>
         <div className={css.locationWrap}>
           <label>

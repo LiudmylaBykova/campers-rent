@@ -5,12 +5,14 @@ import css from "../CamperCard/CamperCard.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCampersFavorites } from "../../redux/selectors";
 import { addFavorites, deleteFavorites } from "../../redux/campersSlice";
+import { openModal } from "../../redux/modal/slice";
+import ModalWrapper from "../ModalWrapper/ModalWrapper";
 
 const CamperCard = ({ camper }) => {
-  console.log(camper);
   const dispatch = useDispatch();
   const favorites = useSelector(selectCampersFavorites);
   const [isActive, setIsActive] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     setIsActive(favorites.some((item) => item._id === camper._id));
@@ -23,6 +25,11 @@ const CamperCard = ({ camper }) => {
       dispatch(addFavorites(camper));
     }
     setIsActive(!isActive);
+  };
+
+  const showModal = () => {
+    setIsModalOpen(true);
+    // dispatch(openModal());
   };
   return (
     <div className={css.card}>
@@ -111,8 +118,11 @@ const CamperCard = ({ camper }) => {
             AC
           </span>
         </div>
-        <button className={css.showMoreBtn}>Show more</button>
+        <button className={css.showMoreBtn} onClick={showModal}>
+          Show more
+        </button>
       </div>
+      <ModalWrapper camper={camper} isOpen={isModalOpen} />
     </div>
   );
 };

@@ -5,8 +5,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.205), rgba(46, 47, 66, 0.201)),
-        url(/camper-bgr.jpg);
+    /* background-image: linear-gradient(rgba(46, 47, 66, 0.205), rgba(46, 47, 66, 0.201)),
+        url(/camper-bgr.jpg); */
+    background-image: url(/camper-bgr.jpg);
 }
 
 .container {
@@ -53,12 +54,11 @@
     border-radius: 200px;
     color: #fff;
     padding: 16px 60px;
-    background-color: transparent;
-    border: 1px solid #E44848;
+    background-color: #E44848;
     transition: all 0.3s ease-in-out;
 }
 
 .link:hover,
 .link:focus {
-    background-color: #E44848;
+    background-color: #D84343;
 }

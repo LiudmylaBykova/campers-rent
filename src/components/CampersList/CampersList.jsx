@@ -29,6 +29,7 @@ const CampersList = () => {
   const handleLoadMoreBtn = () => {
     setCampersToShow((prev) => prev + 4);
   };
+
   return (
     <div className={css.listWrap}>
       {allCampers && (

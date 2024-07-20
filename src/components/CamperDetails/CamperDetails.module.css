@@ -1,0 +1,144 @@
+.card {
+    width: 982px;
+    height: 720px;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #10182833;
+    border-radius: 20px;
+    overflow: scroll;
+}
+
+.titleWrap {
+    text-align: left;
+}
+
+.name {
+    color: #101828;
+    max-width: 339px;
+    height: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+
+.locationWrap {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.reviewWrap {
+    border-bottom: 1px solid black;
+}
+
+.reviews {
+    color: #101828;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+}
+
+.location {
+    color: #101828;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    color: #101828;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 24px;
+}
+
+.imgList {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.img {
+    width: 290px;
+    height: 310px;
+    border-radius: 10px;
+    background-color: #475467;
+    object-fit: cover;
+}
+
+.description {
+    height: 72px;
+    color: #475467;
+    text-align: left;
+    margin-bottom: 44px;
+    overflow: scroll;
+}
+
+.detailsWrap {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #10182833;
+}
+
+.detailsInfo {
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.detailsInfo::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 175%;
+    width: 100%;
+    height: 5px;
+    background-color: #E44848;
+    content: "";
+
+}
+
+/* .detailsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+} */
+
+/* .detailsSpan {
+    color: #101828;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #F2F4F7;
+    border-radius: 100px;
+} */
+
+/* .showMoreBtn {
+    width: 166px;
+    height: 56px;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #E44848;
+    border-radius: 200px;
+    transition: all 0.3s ease-in-out;
+} */
+
+/* .showMoreBtn:hover,
+.showMoreBtn:focus {
+    background-color: #cf2a2a;
+} */

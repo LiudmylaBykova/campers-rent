@@ -22,12 +22,22 @@ const campersSlice = createSlice({
   initialState: initialState,
 
   reducers: {
-    addFavorites(state, action) {
-      state.campersFavorites.push(action.payload);
+    addFavorites: {
+      reducer(state, action) {
+        state.campersFavorites.push(action.payload);
+      },
+      prepare(values) {
+        return {
+          payload: {
+            ...values,
+          },
+        };
+      },
     },
-    deleteFavorites(state, action) {
+
+    deleteFavorites: (state, action) => {
       state.campersFavorites = state.campersFavorites.filter(
-        (camper) => camper.id !== action.payload.id
+        (camper) => camper._id !== action.payload
       );
     },
   },
