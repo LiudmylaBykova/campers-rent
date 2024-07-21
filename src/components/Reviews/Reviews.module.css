@@ -1,0 +1,41 @@
+.reviewsWrap {
+    width: 448px;
+    height: 532px;
+}
+
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.avatarWrap {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #E44848;
+    border-radius: 60px;
+    background-color: #F2F4F7;
+}
+
+.reviewerName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #101828
+}
+
+.ratingWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

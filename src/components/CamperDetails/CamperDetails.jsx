@@ -4,6 +4,7 @@ import icon from "../../assets/icons.svg";
 import css from "../CamperDetails/CamperDetails.module.css";
 import Features from "../Features/Features";
 import Reviews from "../Reviews/Reviews";
+import BookingForm from "../BookingForm/BookingForm";
 
 const CamperDetails = ({ camper }) => {
   const [isActive, setIsActive] = useState("features");
@@ -71,8 +72,11 @@ const CamperDetails = ({ camper }) => {
             Reviews
           </button>
         </div>
-        {isActive === "features" && <Features camper={camper} />}
-        {isActive === "reviews" && <Reviews camper={camper} />}
+        <div className={css.featuresContainer}>
+          {isActive === "features" && <Features camper={camper} />}
+          {isActive === "reviews" && <Reviews camper={camper} />}
+          <BookingForm />
+        </div>
       </div>
     </div>
   );

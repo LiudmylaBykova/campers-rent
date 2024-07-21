@@ -33,8 +33,6 @@
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
     stroke: #2f2f2f;
     transition: 0.3s ease-in-out;
 }

@@ -1,7 +1,11 @@
 .header {
-    min-width: 1280px;
-    padding: 20px 30px;
+    /* min-width: 1280px; */
+    width: 100%;
+    padding: 20px 70px;
     background-color: #475467;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 .navList {
@@ -42,6 +46,22 @@
 
 .svg {
     stroke: #cf2a2a;
+    animation: bounce 1.5s infinite reverse;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
 }
 
 .amount {
