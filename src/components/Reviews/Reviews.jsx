@@ -8,8 +8,8 @@ const Reviews = ({ camper }) => {
   return (
     <div className={css.reviewsWrap}>
       <ul className={css.reviewsList}>
-        {camper.reviews.map((reviewer) => (
-          <li key={reviewer._id}>
+        {camper.reviews.map((reviewer, index) => (
+          <li key={index}>
             <div className={css.avatarWrap}>
               <div className={css.avatar}>
                 {reviewer.reviewer_name.slice(0, 1)}
@@ -24,7 +24,7 @@ const Reviews = ({ camper }) => {
                 />
               </div>
             </div>
-            <p>{reviewer.comment}</p>
+            <p className={css.reviewerComment}>{reviewer.comment}</p>
           </li>
         ))}
       </ul>
