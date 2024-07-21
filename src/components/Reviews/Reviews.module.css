@@ -42,5 +42,8 @@
 }
 
 .reviewerComment {
+    height: 96px;
     color: #475467;
+    overflow: scroll;
+
 }
