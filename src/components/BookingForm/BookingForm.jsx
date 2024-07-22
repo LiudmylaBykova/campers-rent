@@ -4,15 +4,23 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 
-import formatDate from "../../helpers/formatDate";
 import { closeModal } from "../../redux/modal/slice";
 import css from "../BookingForm/BookingForm.module.css";
+import icon from "../../assets/icons.svg";
 import { successToast } from "../../helpers/toast";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const schema = yup.object().shape({
   name: yup.string().required("Please, enter your name!"),
   email: yup.string().required("Please, enter your email!"),
-  date: yup.date().required("Please, choose the date!"),
+  date: yup
+    .string()
+    .matches(
+      /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/,
+      "Date must be in format dd/MM/yyyy"
+    )
+    .required("Please, choose the date!"),
   comment: yup.string(),
 });
 
@@ -25,22 +33,22 @@ const defaultValues = {
 
 const BookingForm = () => {
   const dispatch = useDispatch();
+  const [selectedDate, setSelectedDate] = useState(null);
   const {
     register,
+    setValue,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema), defaultValues });
 
-  const handleSearchBtnSubmit = (values, actions) => {
-    const formatedDate = formatDate(values.date);
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+    const formattedDate = date ? date.toLocaleDateString("en-GB") : "";
+    setValue("date", formattedDate, { shouldValidate: true });
+  };
 
-    const valuesToSend = {
-      name: values.name,
-      email: values.email,
-      date: formatedDate,
-      comment: values.comment,
-    };
-    console.log(valuesToSend);
+  const handleSearchBtnSubmit = (data) => {
+    console.log(data);
     dispatch(closeModal());
     successToast("Your request was sussesfully sended!");
   };
@@ -70,16 +78,24 @@ const BookingForm = () => {
         />
       </label>
       {errors.email && <p className={css.error}>{errors.email.message}</p>}
-      <label>
-        <input
-          className={errors.date ? css.inputError : css.input}
-          type="date"
-          name="date"
-          placeholder="Booking date"
-          {...register("date")}
-        />
-      </label>
-      {errors.date && <p className={css.error}>{"Please, choose the date!"}</p>}
+      <div className={css.labelDatePicker}>
+        <label>
+          <DatePicker
+            name="date"
+            selected={selectedDate}
+            onChange={handleDateChange}
+            placeholderText="Booking date"
+            dateFormat="dd.MM.yyyy"
+            className={
+              errors.date ? css.inputDatePickerError : css.inputDatePicker
+            }
+          />
+          <svg className={css.svgDatePicker} width="20" height="20">
+            <use href={`${icon}#icon-calendar`}></use>
+          </svg>
+        </label>
+        {errors.date && <p className={css.error}>{errors.date.message}</p>}
+      </div>
       <label>
         <textarea
           className={css.textarea}
