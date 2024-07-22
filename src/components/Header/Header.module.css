@@ -1,5 +1,4 @@
 .header {
-    /* min-width: 1280px; */
     width: 100%;
     padding: 20px 70px;
     background-color: #475467;
@@ -67,7 +66,7 @@
 .amount {
     position: absolute;
     right: -12px;
-    color: #fafafa;
+    color: #f19393;
     font-size: 16px;
     font-weight: 500;
 }

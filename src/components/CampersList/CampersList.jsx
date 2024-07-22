@@ -12,8 +12,8 @@ import css from "../CampersList/CampersList.module.css";
 
 const CampersList = () => {
   const dispatch = useDispatch();
-  // const isLoading = useSelector(selectIsLoading);
-  // const isError = useSelector(selectIsError);
+  const isLoading = useSelector(selectIsLoading);
+  const isError = useSelector(selectIsError);
   const campers = useSelector(selectCampers);
   const [allCampers, setAllCampers] = useState([]);
   const [campersToShow, setCampersToShow] = useState(4);

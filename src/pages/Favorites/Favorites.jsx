@@ -2,11 +2,12 @@ import React from "react";
 
 import css from "../Favorites/Favorites.module.css";
 import { useSelector } from "react-redux";
-import { selectCampersFavorites } from "../../redux/selectors";
+import { selectCampersFavorites, selectIsError } from "../../redux/selectors";
 import CamperCard from "../../components/CamperCard/CamperCard";
 
 const Favorites = () => {
   const favorites = useSelector(selectCampersFavorites);
+  const isError = useSelector(selectIsError);
   return (
     <div className={css.section}>
       <div className={css.container}>
@@ -15,7 +16,8 @@ const Favorites = () => {
             <ul className={css.list}>
               {favorites.map((camper) => (
                 <li key={camper._id}>
-                  <CamperCard camper={camper} />
+                  {isError && <ErrorMessage />}
+                  {!isError && <CamperCard camper={camper} />}
                 </li>
               ))}
             </ul>

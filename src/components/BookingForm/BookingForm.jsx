@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 
+import formatDate from "../../helpers/formatDate";
 import { closeModal } from "../../redux/modal/slice";
 import css from "../BookingForm/BookingForm.module.css";
+import { successToast } from "../../helpers/toast";
 
 const schema = yup.object().shape({
   name: yup.string().required("Please, enter your name!"),
   email: yup.string().required("Please, enter your email!"),
-  date: yup.date().required("Please, enter the date!"),
-  comment: yup.string().required("Please, your comment!"),
+  date: yup.date().required("Please, choose the date!"),
+  comment: yup.string(),
 });
 
 const defaultValues = {
@@ -30,9 +32,17 @@ const BookingForm = () => {
   } = useForm({ resolver: yupResolver(schema), defaultValues });
 
   const handleSearchBtnSubmit = (values, actions) => {
-    console.log(values);
-    // ===
+    const formatedDate = formatDate(values.date);
+
+    const valuesToSend = {
+      name: values.name,
+      email: values.email,
+      date: formatedDate,
+      comment: values.comment,
+    };
+    console.log(valuesToSend);
     dispatch(closeModal());
+    successToast("Your request was sussesfully sended!");
   };
   return (
     <form className={css.form} onSubmit={handleSubmit(handleSearchBtnSubmit)}>
@@ -60,7 +70,6 @@ const BookingForm = () => {
         />
       </label>
       {errors.email && <p className={css.error}>{errors.email.message}</p>}
-
       <label>
         <input
           className={errors.date ? css.inputError : css.input}
@@ -70,17 +79,15 @@ const BookingForm = () => {
           {...register("date")}
         />
       </label>
-      {errors.date && <p className={css.error}>{errors.date.message}</p>}
-
+      {errors.date && <p className={css.error}>{"Please, choose the date!"}</p>}
       <label>
         <textarea
-          className={errors.comment ? css.textareaError : css.textarea}
+          className={css.textarea}
           name="comment"
           placeholder="Comment"
           {...register("comment")}
         />
       </label>
-      {errors.comment && <p className={css.error}>{errors.comment.message}</p>}
       <button className={css.btn} type="submit">
         Send
       </button>
