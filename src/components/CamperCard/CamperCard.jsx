@@ -7,6 +7,7 @@ import { selectCampersFavorites } from "../../redux/selectors";
 import { addFavorites, deleteFavorites } from "../../redux/campersSlice";
 import { openModal } from "../../redux/modal/slice";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
+import FeaturesList from "../FeaturesList/FeaturesList";
 
 const CamperCard = ({ camper }) => {
   const dispatch = useDispatch();
@@ -79,42 +80,7 @@ const CamperCard = ({ camper }) => {
         </div>
         <p className={css.description}>{camper.description}</p>
         <div className={css.detailsWrap}>
-          <span className={css.detailsSpan}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-users`}></use>
-            </svg>
-            {camper.adults} Adolts
-          </span>
-          <span className={css.detailsSpan}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-automatic`}></use>
-            </svg>
-            Automatic
-          </span>
-          <span className={css.detailsSpan}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-petrol`}></use>
-            </svg>
-            Petrol
-          </span>
-          <span className={css.detailsSpan}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-kitchen`}></use>
-            </svg>
-            Kitchen
-          </span>
-          <span className={css.detailsSpan}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-bad`}></use>
-            </svg>
-            {camper.details.beds} Bad
-          </span>
-          <span className={css.detailsSpan}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-wind`}></use>
-            </svg>
-            AC
-          </span>
+          <FeaturesList camper={camper} />
         </div>
         <button className={css.showMoreBtn} onClick={showModal}>
           Show more

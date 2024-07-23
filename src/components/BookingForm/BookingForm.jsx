@@ -16,11 +16,8 @@ const schema = yup.object().shape({
   email: yup.string().required("Please, enter your email!"),
   date: yup
     .string()
-    .matches(
-      /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/,
-      "Date must be in format dd/MM/yyyy"
-    )
-    .required("Please, choose the date!"),
+    .matches(/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/)
+    .required("Please, choose the date in format 00.00.0000!"),
   comment: yup.string(),
 });
 
@@ -47,10 +44,15 @@ const BookingForm = () => {
     setValue("date", formattedDate, { shouldValidate: true });
   };
 
-  const handleSearchBtnSubmit = (data) => {
-    console.log(data);
-    dispatch(closeModal());
-    successToast("Your request was sussesfully sended!");
+  const handleSearchBtnSubmit = (values) => {
+    try {
+      dispatch(closeModal());
+      successToast(
+        "Your request was sussesfully sended! Our manager will connect with you!"
+      );
+    } catch (error) {
+      console.log(error.message);
+    }
   };
   return (
     <form className={css.form} onSubmit={handleSubmit(handleSearchBtnSubmit)}>
@@ -94,7 +96,11 @@ const BookingForm = () => {
             <use href={`${icon}#icon-calendar`}></use>
           </svg>
         </label>
-        {errors.date && <p className={css.error}>{errors.date.message}</p>}
+        {errors.date && (
+          <p className={css.error}>
+            {"Please, choose the date in format 00.00.0000!"}
+          </p>
+        )}
       </div>
       <label>
         <textarea

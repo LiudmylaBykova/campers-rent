@@ -1,100 +1,21 @@
 import React from "react";
 
-import icon from "../../assets/icons.svg";
+import FeaturesList from "../FeaturesList/FeaturesList";
 import css from "../Features/Features.module.css";
 
 const Features = ({ camper }) => {
   return (
     <div className={css.featuresWrap}>
-      <ul className={css.featuresList}>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-users`}></use>
-            </svg>
-            {camper.adults} Adults
-          </span>
-        </li>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-automatic`}></use>
-            </svg>
-            Automatic
-          </span>
-        </li>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-wind`}></use>
-            </svg>
-            AC
-          </span>
-        </li>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-petrol`}></use>
-            </svg>
-            Petrol
-          </span>
-        </li>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-kitchen`}></use>
-            </svg>
-            Kitchen
-          </span>
-        </li>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-bad`}></use>
-            </svg>
-            {camper.details.beds} Bads
-          </span>
-        </li>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-air-conditioner`}></use>
-            </svg>
-            {camper.details.airConditioner} Air Conditioner
-          </span>
-        </li>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-cd`}></use>
-            </svg>
-            CD
-          </span>
-        </li>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-radio`}></use>
-            </svg>
-            Radio
-          </span>
-        </li>
-        <li>
-          <span className={css.span}>
-            <svg width="20" height="20">
-              <use href={`${icon}#icon-plate`}></use>
-            </svg>
-            {camper.details.hob} Hob
-          </span>
-        </li>
-      </ul>
+      <div className={css.featuresListWrap}>
+        <FeaturesList camper={camper} />
+      </div>
       <div>
         <div className={css.titleWrap}>
           <h2 className={css.title}>Vehicle details</h2>
         </div>
         <div className={css.detailsItem}>
           <span className={css.detailsSpan}>Form</span>
-          <span className={css.detailsSpan}>Panel truck</span>
+          <span className={css.detailsSpan}>{camper.form}</span>
         </div>
         <ul>
           <li className={css.detailsItem}>

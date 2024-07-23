@@ -100,23 +100,8 @@
 }
 
 .detailsWrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    height: 98px;
     margin-bottom: 24px;
-}
-
-.detailsSpan {
-    color: #101828;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 18px;
-    height: 44px;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: #F2F4F7;
-    border-radius: 100px;
 }
 
 .showMoreBtn {
