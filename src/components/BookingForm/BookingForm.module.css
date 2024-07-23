@@ -71,6 +71,12 @@
     position: absolute;
     top: 18px;
     left: 360px;
+    transition: all 0.3s ease-in-out;
+}
+
+.svgDatePicker:hover,
+.svgDatePicker:focus {
+    fill: #cf2a2a;
 }
 
 .inputError {

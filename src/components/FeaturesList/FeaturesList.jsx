@@ -18,7 +18,7 @@ const FeaturesList = ({ camper }) => {
         <li>
           <span className={css.span}>
             <svg width="20" height="20">
-              <use href={`${icon}#icon-children`}></use>
+              <use href={`${icon}#icon-child`}></use>
             </svg>
             {camper.children} Children
           </span>
@@ -166,23 +166,23 @@ const FeaturesList = ({ camper }) => {
         <li>
           <span className={css.span}>
             <svg width="20" height="20">
-              <use href={`${icon}#icon-plate`}></use>
+              <use href={`${icon}#icon-microwave`}></use>
             </svg>
             Microwave
           </span>
         </li>
       )}
-      {camper.details.gas > 0 && (
+      {camper.details.gas && (
         <li>
           <span className={css.span}>
             <svg width="20" height="20">
-              <use href={`${icon}#icon-petrol`}></use>
+              <use href={`${icon}#icon-gas`}></use>
             </svg>
             Gas
           </span>
         </li>
       )}
-      {camper.details.water > 0 && (
+      {camper.details.water && (
         <li>
           <span className={css.span}>
             <svg width="20" height="20">

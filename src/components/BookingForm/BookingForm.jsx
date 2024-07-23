@@ -1,25 +1,17 @@
 import React, { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-
-import { closeModal } from "../../redux/modal/slice";
-import css from "../BookingForm/BookingForm.module.css";
-import icon from "../../assets/icons.svg";
-import { successToast } from "../../helpers/toast";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const schema = yup.object().shape({
-  name: yup.string().required("Please, enter your name!"),
+import { closeModal } from "../../redux/modal/slice";
+import { successToast } from "../../helpers/toast";
+import { bookingSchema } from "../../helpers/schemas";
+import icon from "../../assets/icons.svg";
+
   email: yup.string().required("Please, enter your email!"),
-  date: yup
-    .string()
-    .matches(/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/)
-    .required("Please, choose the date in format 00.00.0000!"),
-  comment: yup.string(),
-});
+import css from "../BookingForm/BookingForm.module.css";
 
 const defaultValues = {
   name: "",
@@ -36,7 +28,7 @@ const BookingForm = () => {
     setValue,
     handleSubmit,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(schema), defaultValues });
+  } = useForm({ resolver: yupResolver(bookingSchema), defaultValues });
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -96,11 +88,7 @@ const BookingForm = () => {
             <use href={`${icon}#icon-calendar`}></use>
           </svg>
         </label>
-        {errors.date && (
-          <p className={css.error}>
-            {"Please, choose the date in format 00.00.0000!"}
-          </p>
-        )}
+        {errors.date && <p className={css.error}>{errors.date.message}</p>}
       </div>
       <label>
         <textarea

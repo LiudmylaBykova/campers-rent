@@ -38,7 +38,6 @@ const CamperDetails = ({ camper }) => {
         {camper.gallery.map((item, index) => (
           <li key={index}>
             <div className={css.imgWrap}>
-              {" "}
               <img
                 className={css.img}
                 src={item}
