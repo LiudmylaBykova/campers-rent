@@ -10,7 +10,6 @@ import { successToast } from "../../helpers/toast";
 import { bookingSchema } from "../../helpers/schemas";
 import icon from "../../assets/icons.svg";
 
-  email: yup.string().required("Please, enter your email!"),
 import css from "../BookingForm/BookingForm.module.css";
 
 const defaultValues = {
