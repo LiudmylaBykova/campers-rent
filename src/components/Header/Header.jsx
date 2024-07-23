@@ -1,11 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import { selectCampersFavorites } from "../../redux/selectors";
 import icon from "../../assets/icons.svg";
-
 import css from "../Header/Header.module.css";
-import { useSelector } from "react-redux";
 
 const Header = () => {
   const favorites = useSelector(selectCampersFavorites);

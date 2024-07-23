@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
-import icon from "../../assets/icons.svg";
-import css from "../CamperDetails/CamperDetails.module.css";
 import Features from "../Features/Features";
 import Reviews from "../Reviews/Reviews";
 import BookingForm from "../BookingForm/BookingForm";
+
+import icon from "../../assets/icons.svg";
+import css from "../CamperDetails/CamperDetails.module.css";
 
 const CamperDetails = ({ camper }) => {
   const [isActive, setIsActive] = useState("features");

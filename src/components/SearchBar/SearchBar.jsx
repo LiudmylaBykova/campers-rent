@@ -1,8 +1,10 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 import icon from "../../assets/icons.svg";
 import css from "../SearchBar/SearchBar.module.css";
-import { useForm } from "react-hook-form";
+
+import { useDispatch, useSelector } from "react-redux";
 
 const SearchBar = () => {
   const {
@@ -16,7 +18,7 @@ const SearchBar = () => {
   };
   return (
     <div className={css.searchContainer}>
-      <form onSubmit={handleSubmit(handleSearchBtnSubmit)} className={css.form}>
+      <form className={css.form}>
         <p className={css.location}> Location</p>
         <div className={css.locationWrap}>
           <label>
@@ -74,7 +76,7 @@ const SearchBar = () => {
               <label className={css.item}>
                 <input className={css.input} type="checkbox" name="equipmant" />
                 <svg className={css.svg} width="32" height="32">
-                  <use href={`${icon}#icon-paper`}></use>
+                  <use href={`${icon}#icon-shower`}></use>
                 </svg>
                 <p className={css.description}>Shower/WC</p>
               </label>
@@ -87,7 +89,7 @@ const SearchBar = () => {
           <ul className={css.list}>
             <li>
               <label className={css.item}>
-                <input className={css.input} type="radio" name="car" />
+                <input className={css.input} type="radio" name="car1" />
                 <svg className={css.svg} width="40" height="40">
                   <use href={`${icon}#icon-car1`}></use>
                 </svg>
@@ -96,7 +98,7 @@ const SearchBar = () => {
             </li>
             <li>
               <label className={css.carItem}>
-                <input className={css.input} type="radio" name="car" />
+                <input className={css.input} type="radio" name="car2" />
                 <svg className={css.svg} width="40" height="40">
                   <use href={`${icon}#icon-car2`}></use>
                 </svg>
@@ -105,7 +107,7 @@ const SearchBar = () => {
             </li>
             <li>
               <label className={css.item}>
-                <input className={css.input} type="radio" name="car" />
+                <input className={css.input} type="radio" name="car3" />
                 <svg className={css.svg} width="40" height="40">
                   <use href={`${icon}#icon-car3`}></use>
                 </svg>

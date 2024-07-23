@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
-
-import icon from "../../assets/icons.svg";
-import css from "../CamperCard/CamperCard.module.css";
 import { useDispatch, useSelector } from "react-redux";
+
 import { selectCampersFavorites } from "../../redux/selectors";
-import { addFavorites, deleteFavorites } from "../../redux/campersSlice";
+import {
+  addFavorites,
+  deleteFavorites,
+} from "../../redux/campers/campersSlice";
 import { openModal } from "../../redux/modal/slice";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
 import FeaturesList from "../FeaturesList/FeaturesList";
+import icon from "../../assets/icons.svg";
+import css from "../CamperCard/CamperCard.module.css";
 
 const CamperCard = ({ camper }) => {
   const dispatch = useDispatch();

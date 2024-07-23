@@ -1,7 +1,6 @@
 import React from "react";
 import { Rating } from "@mui/material";
 
-import icon from "../../assets/icons.svg";
 import css from "../Reviews/Reviews.module.css";
 
 const Reviews = ({ camper }) => {

@@ -4,6 +4,11 @@ import { getAllCampers } from "./campersOps";
 const initialState = {
   campers: [],
   campersFavorites: [],
+  location: "",
+  filters: {
+    options: [],
+    camperType: "",
+  },
   isLoading: false,
   isError: false,
 };
@@ -22,6 +27,12 @@ const campersSlice = createSlice({
   initialState: initialState,
 
   reducers: {
+    changeLocation: (state, action) => {
+      state.location = action.payload;
+    },
+    setFilters(state, action) {
+      state.filters = action.payload;
+    },
     addFavorites: {
       reducer(state, action) {
         state.campersFavorites.push(action.payload);
@@ -55,4 +66,5 @@ const campersSlice = createSlice({
 });
 
 export const campersReducer = campersSlice.reducer;
-export const { addFavorites, deleteFavorites } = campersSlice.actions;
+export const { addFavorites, deleteFavorites, changeLocation, setFilters } =
+  campersSlice.actions;

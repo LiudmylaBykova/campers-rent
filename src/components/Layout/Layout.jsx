@@ -1,9 +1,9 @@
 import React from "react";
+import { Toaster } from "react-hot-toast";
+
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-
 import css from "../Layout/Layout.module.css";
-import { Toaster } from "react-hot-toast";
 
 const Layout = ({ children }) => {
   return (

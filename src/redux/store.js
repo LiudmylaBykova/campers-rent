@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { campersReducer } from "./campersSlice";
+
 import storage from "redux-persist/lib/storage";
 import {
   persistReducer,
@@ -12,6 +12,7 @@ import {
   REGISTER,
 } from "redux-persist";
 import { modalReducer } from "./modal/slice";
+import { campersReducer } from "./campers/campersSlice";
 
 const favoritesPersistConfig = {
   key: "campers",
