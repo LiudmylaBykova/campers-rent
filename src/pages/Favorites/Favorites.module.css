@@ -30,3 +30,13 @@
     font-weight: 600;
     color: #E44848;
 }
+
+.link {
+    color: #484747;
+    border-bottom: 1px solid #E44848;
+}
+
+.link:hover,
+.link:focus {
+    color: #E44848;
+}

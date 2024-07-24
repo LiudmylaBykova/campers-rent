@@ -4,6 +4,7 @@ import css from "../Favorites/Favorites.module.css";
 import { useSelector } from "react-redux";
 import { selectCampersFavorites, selectIsError } from "../../redux/selectors";
 import CamperCard from "../../components/CamperCard/CamperCard";
+import { Link } from "react-router-dom";
 
 const Favorites = () => {
   const favorites = useSelector(selectCampersFavorites);
@@ -23,7 +24,12 @@ const Favorites = () => {
             </ul>
           </div>
         ) : (
-          <p className={css.text}>Favorites is empty!</p>
+          <>
+            <p className={css.text}>Your favorites list is empty!</p>
+            <Link to="/catalog" className={css.link}>
+              See all campers
+            </Link>
+          </>
         )}
       </div>
     </div>
