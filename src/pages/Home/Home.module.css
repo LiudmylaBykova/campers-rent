@@ -1,31 +1,54 @@
 .section {
-    min-width: 1280px;
-    min-height: 700px;
+    min-width: 320px;
+    min-height: 500px;
     background-color: #F2F4F7;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* background-image: linear-gradient(rgba(46, 47, 66, 0.205), rgba(46, 47, 66, 0.201)),
-        url(/camper-bgr.jpg); */
     background-image: url(/camper-bgr.jpg);
 }
 
 .container {
+    min-width: 320px;
+    max-width: 767.98px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 700px;
+    min-height: 500px;
     padding: 30px;
+
+    @media screen and (min-width: 768px) and (max-width: 1439.98px) {
+        min-width: 768px;
+        max-width: 1439.98px;
+        min-height: 700px;
+        padding: 20px 50px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        min-width: 1440px;
+    }
 }
 
 .titleWrap {
-    width: 400px;
+    width: 200px;
     margin-top: auto;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+        width: 400px;
+        margin-bottom: 0px;
+    }
 }
 
 .title {
-    font-size: 36px;
+    font-size: 16px;
+    font-weight: 700;
     color: #101828;
     letter-spacing: -0.02em;
+
+    @media screen and (min-width: 768px) {
+        font-size: 36px;
+    }
 }
 
 .titleSpan {
@@ -35,9 +58,13 @@
 }
 
 .text {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 10px;
     color: #E44848;
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+        font-weight: 500;
+    }
 }
 
 .linkWrap {
@@ -47,15 +74,23 @@
 }
 
 .link {
-    font-size: 16px;
-    font-weight: 600;
-    width: 173px;
-    height: 56px;
+    font-size: 10px;
+    font-weight: 500;
+    width: 90px;
+    height: 35px;
     border-radius: 200px;
     color: #fff;
-    padding: 16px 60px;
+    padding: 11px 25px;
     background-color: #E44848;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        font-weight: 600;
+        width: 173px;
+        height: 56px;
+        padding: 16px 60px;
+    }
 }
 
 .link:hover,

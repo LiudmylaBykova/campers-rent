@@ -1,15 +1,32 @@
 .header {
+    min-width: 320px;
+    max-width: 767.98px;
     width: 100%;
-    padding: 20px 70px;
+    padding: 20px 20px;
     background-color: #475467;
     position: fixed;
     top: 0;
     z-index: 1000;
+
+    @media screen and (min-width: 768px) and (max-width: 1439.98px) {
+        min-width: 768px;
+        max-width: 1439.98px;
+        padding: 20px 50px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        min-width: 1440px;
+        padding: 20px 70px;
+    }
 }
 
 .navList {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+
+    @media screen and (min-width: 768px) {
+        gap: 20px;
+    }
 }
 
 .linkHomeWrap {
@@ -19,11 +36,22 @@
 .navLink {
     position: relative;
     display: flex;
+    align-items: center;
     gap: 10px;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 500;
     color: #E44848;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 26px;
+        font-weight: 700;
+    }
 }
 
 .active {
@@ -49,6 +77,11 @@
 .svg {
     stroke: #cf2a2a;
     animation: bounce 1.5s infinite reverse;
+
+    @media screen and (min-width: 768px) {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @keyframes bounce {
@@ -68,8 +101,14 @@
 
 .amount {
     position: absolute;
-    right: -12px;
+    top: -1px;
+    right: -6px;
     color: #cf2a2a;
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 500;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        right: -12px;
+    }
 }

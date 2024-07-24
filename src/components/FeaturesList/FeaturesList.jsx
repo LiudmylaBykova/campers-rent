@@ -8,7 +8,7 @@ const FeaturesList = ({ camper }) => {
     <ul className={css.featuresList}>
       <li>
         <span className={css.span}>
-          <svg width="20" height="20">
+          <svg className={css.svg} width="10" height="10">
             <use href={`${icon}#icon-users`}></use>
           </svg>
           {camper.adults} Adults
@@ -17,7 +17,7 @@ const FeaturesList = ({ camper }) => {
       {camper.children > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-child`}></use>
             </svg>
             {camper.children} Children
@@ -26,7 +26,7 @@ const FeaturesList = ({ camper }) => {
       )}
       <li>
         <span className={css.span}>
-          <svg width="20" height="20">
+          <svg className={css.svg} width="10" height="10">
             <use href={`${icon}#icon-automatic`}></use>
           </svg>
           {camper.transmission}
@@ -35,7 +35,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.airConditioner > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-wind`}></use>
             </svg>
             AC
@@ -45,7 +45,7 @@ const FeaturesList = ({ camper }) => {
       {camper.engine && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-petrol`}></use>
             </svg>
             {camper.engine}
@@ -55,7 +55,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.bathroom > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-bath`}></use>
             </svg>
             Bathroom
@@ -65,7 +65,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.kitchen > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-kitchen`}></use>
             </svg>
             Kitchen
@@ -75,7 +75,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.beds > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-bad`}></use>
             </svg>
             {camper.details.beds} Bads
@@ -85,7 +85,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.airConditioner > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-air-conditioner`}></use>
             </svg>
             {camper.details.airConditioner} Air conditioner
@@ -95,7 +95,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.TV > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-tv`}></use>
             </svg>
             TV
@@ -105,7 +105,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.CD > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-cd`}></use>
             </svg>
             CD
@@ -115,7 +115,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.radio > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-radio`}></use>
             </svg>
             Radio
@@ -125,7 +125,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.shower > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-shower`}></use>
             </svg>
             Shower
@@ -135,7 +135,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.toilet > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-paper`}></use>
             </svg>
             Toilet
@@ -145,7 +145,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.freezer > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-freezer`}></use>
             </svg>
             Freezer
@@ -155,7 +155,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.hob > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-plate`}></use>
             </svg>
             {camper.details.hob} Hob
@@ -165,7 +165,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.microwave > 0 && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-microwave`}></use>
             </svg>
             Microwave
@@ -175,7 +175,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.gas && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-gas`}></use>
             </svg>
             Gas
@@ -185,7 +185,7 @@ const FeaturesList = ({ camper }) => {
       {camper.details.water && (
         <li>
           <span className={css.span}>
-            <svg width="20" height="20">
+            <svg className={css.svg} width="10" height="10">
               <use href={`${icon}#icon-water`}></use>
             </svg>
             Water

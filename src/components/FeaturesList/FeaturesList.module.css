@@ -4,6 +4,10 @@
     flex-wrap: wrap;
     gap: 8px;
     overflow: scroll;
+
+    @media screen and (min-width: 768px) {
+        gap: 4px;
+    }
 }
 
 .span {
@@ -11,11 +15,25 @@
     color: #101828;
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 18px;
-    height: 44px;
-    font-size: 16px;
+    gap: 4px;
+    padding: 6px 9px;
+    height: 22px;
+    font-size: 10px;
     font-weight: 500;
     background-color: #F2F4F7;
     border-radius: 100px;
+
+    @media screen and (min-width: 768px) {
+        gap: 8px;
+        padding: 12px 18px;
+        height: 44px;
+        font-size: 16px;
+    }
+}
+
+.svg {
+    @media screen and (min-width: 768px) {
+        width: 20px;
+        height: 20px;
+    }
 }

@@ -1,10 +1,28 @@
 .footer {
-    min-width: 1280px;
-    padding: 60px 20px 20px;
+    min-width: 320px;
+    max-width: 767.98px;
+    width: 100%;
+    padding: 20px 30px;
     background-color: #475467;
     text-align: center;
+
+    @media screen and (min-width: 768px) and (max-width: 1439.98px) {
+        min-width: 768px;
+        max-width: 1439.98px;
+        padding: 20px 50px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        min-width: 1440px;
+        padding: 20px 70px;
+    }
 }
 
 .text {
-    color: #E44848
+    font-size: 10px;
+    color: #E44848;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
 }

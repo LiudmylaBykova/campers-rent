@@ -6,7 +6,6 @@ import {
   addFavorites,
   deleteFavorites,
 } from "../../redux/campers/campersSlice";
-// import { openModal } from "../../redux/modal/slice";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
 import FeaturesList from "../FeaturesList/FeaturesList";
 import icon from "../../assets/icons.svg";
@@ -45,8 +44,8 @@ const CamperCard = ({ camper }) => {
         className={css.img}
         src={camper.gallery[0]}
         alt={camper.name}
-        width={290}
-        height={310}
+        width={280}
+        height={300}
       />
 
       <div className={css.descriptionWrap}>
@@ -59,9 +58,9 @@ const CamperCard = ({ camper }) => {
             onClick={handleOnLikeBtnClik}
           >
             <svg
-              className={!isActive ? "" : css.svgFavorite}
-              width="24"
-              height="24"
+              className={!isActive ? css.svg : css.svgFavorite}
+              width="16"
+              height="16"
             >
               {!isActive ? (
                 <use href={`${icon}#icon-hurt`}></use>
@@ -74,14 +73,14 @@ const CamperCard = ({ camper }) => {
         <div className={css.locationWrap}>
           <div className={css.reviewWrap}>
             <span className={css.reviews}>
-              <svg className={css.svg} width="24" height="24">
+              <svg className={css.svgStar} width="18" height="18">
                 <use href={`${icon}#icon-star`}></use>
               </svg>
               {camper.rating}({camper.reviews.length} Reviews)
             </span>
           </div>
           <span className={css.location}>
-            <svg width="16" height="16">
+            <svg className={css.svgLocation} width="10" height="10">
               <use href={`${icon}#icon-map`}></use>
             </svg>
             {camper.location}

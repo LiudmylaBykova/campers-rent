@@ -1,11 +1,20 @@
 .card {
     display: flex;
-    gap: 24px;
-    width: 888px;
-    padding: 24px;
+    flex-direction: column;
+    gap: 12px;
+    width: 300px;
+    padding: 10px;
     border: 1px solid #10182833;
     border-radius: 20px;
+    margin: 0 auto;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        gap: 24px;
+        width: 888px;
+        padding: 24px;
+    }
 }
 
 .card:hover,
@@ -15,58 +24,105 @@
 }
 
 .img {
+    width: 280;
+    height: 300px;
     border-radius: 10px;
     background-color: #475467;
     object-fit: cover;
+
+    @media screen and (min-width: 768px) {
+        width: 290;
+        height: 310px;
+    }
 }
 
 .descriptionWrap {
-    width: 526px;
     text-align: left;
+
+    @media screen and (min-width: 768px) {
+        width: 526px;
+    }
 }
 
 .nameWrap {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 8px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 4px;
+    }
 }
 
 .name {
     color: #101828;
-    max-width: 339px;
-    height: 30px;
-    font-size: 24px;
+    width: 190px;
+    height: 20px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25;
     margin-right: auto;
     overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+        max-width: 339px;
+        height: 30px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.25;
+        margin-right: auto;
+    }
 }
 
 .price {
     color: #101828;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25;
+
+    @media screen and (min-width: 768px) {
+        font-size: 24px;
+    }
 }
 
 .likeBtn {
     display: flex;
     background-color: transparent;
+    margin-left: auto;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 0;
+    }
 }
 
-.csg {
-    stroke: #101828;
+.svg {
+    @media screen and (min-width: 768px) {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .svgFavorite {
     fill: #E44848;
+
+    @media screen and (min-width: 768px) {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .locationWrap {
     display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        gap: 16px;
+        margin-bottom: 24px;
+    }
 }
 
 .reviewWrap {
@@ -75,45 +131,83 @@
 
 .reviews {
     color: #101828;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 12px;
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 .location {
     color: #101828;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 12px;
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+.svgLocation {
+    @media screen and (min-width: 768px) {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.svgStar {
+    @media screen and (min-width: 768px) {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .description {
     color: #475467;
-    width: 520px;
     height: 24px;
+    font-size: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+        width: 520px;
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
 }
 
 .detailsWrap {
-    height: 98px;
-    margin-bottom: 24px;
+    height: 55px;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+        height: 95px;
+        margin-bottom: 24px;
+    }
 }
 
 .showMoreBtn {
-    width: 166px;
-    height: 56px;
-    padding: 16px 40px;
-    font-size: 16px;
+    width: 90px;
+    height: 35px;
+    padding: 8px 20px;
+    font-size: 8px;
     font-weight: 500;
     color: #fff;
     background-color: #E44848;
     border-radius: 200px;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        width: 166px;
+        height: 56px;
+        font-size: 16px;
+        padding: 16px 40px;
+    }
 }
 
 .showMoreBtn:hover,

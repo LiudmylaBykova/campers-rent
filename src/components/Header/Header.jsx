@@ -21,8 +21,8 @@ const Header = () => {
         <div className={css.linkHomeWrap}>
           <NavLink to="/" className={getNavLinkClassName}>
             Campers
-            <svg width="40" height="40">
-              <use className={css.svg} href={`${icon}#icon-campervan`}></use>
+            <svg className={css.svg} width="20" height="20">
+              <use href={`${icon}#icon-campervan`}></use>
             </svg>
           </NavLink>
         </div>

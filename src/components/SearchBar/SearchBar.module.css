@@ -1,32 +1,59 @@
 .searchContainer {
-    width: 360px;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        width: 360px;
+        margin-bottom: 20px;
+    }
 }
 
 .form {
-    width: 360px;
+    width: 300px;
+
+    @media screen and (min-width: 768px) {
+        width: 360px;
+    }
 }
 
 .location {
     color: #10182899;
+    font-size: 10px;
     font-weight: 500;
     margin-bottom: 8px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 .locationWrap {
     width: 100%;
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
 }
 
 .locationInput {
     width: 100%;
+    font-size: 10px;
     background-color: #F7F7F7;
-    height: 56px;
-    padding: 18px 18px 18px 44px;
+    height: 36px;
+    padding: 12px 12px 12px 22px;
     border-radius: 10px;
     border: none;
     outline: none;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        height: 56px;
+        padding: 18px 18px 18px 44px;
+    }
 }
 
 .locationInput:hover,
@@ -40,34 +67,60 @@
 
 .locationSvg {
     position: absolute;
-    left: 18px;
-    top: 18px;
+    left: 12px;
+    top: 12px;
+
+    @media screen and (min-width: 768px) {
+        width: 18px;
+        height: 20px;
+        left: 18px;
+        top: 18px;
+    }
 }
 
 .wrap {
-    margin-bottom: 32px;
+    margin-bottom: 18px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
 }
 
 .equipmantText {
     color: #475467;
+    font-size: 12px;
     font-weight: 500;
-    margin-bottom: 14px;
+    margin-bottom: 6px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
 }
 
 .title {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 600;
     color: #101828;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
 }
 
 .list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 24px 0 0 0;
+    gap: 5px;
+    padding: 12px 0 0 0;
     border-top: 1px solid #10182833;
 
+    @media screen and (min-width: 768px) {
+        gap: 10px;
+        padding: 24px 0 0 0;
+    }
 }
 
 .item {
@@ -75,13 +128,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 112px;
-    height: 95px;
-    padding: 17px 40px;
-    gap: 12px;
+    width: 56px;
+    height: 45px;
+    padding: 12px 20px;
+    gap: 3px;
     border-radius: 10px;
     border: 1px solid #10182833;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        width: 112px;
+        height: 95px;
+        padding: 17px 40px;
+        gap: 6px;
+    }
 }
 
 .item:hover,
@@ -93,19 +154,33 @@
 .input {
     opacity: 0;
     position: relative;
-    width: 112px;
-    height: 95px;
+    width: 61px;
+    height: 45px;
 
+    @media screen and (min-width: 768px) {
+        width: 112px;
+        height: 95px;
+    }
 }
 
 .svg {
     position: absolute;
+
+    @media screen and (min-width: 768px) {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .description {
+    font-size: 8px;
     font-weight: 500;
     text-align: center;
     color: #101828;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 .carItem {
@@ -113,13 +188,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 112px;
-    height: 95px;
-    padding: 7px;
-    gap: 12px;
+    width: 57px;
+    height: 45px;
+    padding: 3px;
+    gap: 3px;
     border-radius: 10px;
     border: 1px solid #10182833;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        width: 112px;
+        height: 95px;
+        padding: 7px;
+        gap: 6px;
+    }
 }
 
 .carItem:hover,
@@ -128,16 +211,32 @@
     box-shadow: rgba(132, 60, 60, 0.24) 0px 3px 8px;
 }
 
+.svgVehicle {
+    position: absolute;
+
+    @media screen and (min-width: 768px) {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 .searchBtn {
-    width: 166px;
-    height: 56px;
-    padding: 16px 40px;
-    font-size: 16px;
+    width: 90px;
+    height: 35px;
+    padding: 8px 20px;
+    font-size: 10px;
     font-weight: 500;
     color: #fff;
     background-color: #E44848;
     border-radius: 200px;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        width: 166px;
+        height: 56px;
+        font-size: 16px;
+        padding: 16px 40px;
+    }
 }
 
 .searchBtn:hover,
