@@ -11,7 +11,6 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import { modalReducer } from "./modal/slice";
 import { campersReducer } from "./campers/campersSlice";
 
 const favoritesPersistConfig = {
@@ -23,7 +22,6 @@ const favoritesPersistConfig = {
 export const store = configureStore({
   reducer: {
     campers: persistReducer(favoritesPersistConfig, campersReducer),
-    modal: modalReducer,
   },
 
   middleware: (getDefaultMiddleware) =>

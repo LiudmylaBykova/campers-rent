@@ -32,7 +32,7 @@ const CamperDetails = ({ camper }) => {
             {camper.location}
           </span>
         </div>
-        <p className={css.price}>€{camper.price}, 00</p>
+        <p className={css.price}>&#8364;{camper.price}, 00</p>
       </div>
       <ul className={css.imgList}>
         {camper.gallery.map((item, index) => (

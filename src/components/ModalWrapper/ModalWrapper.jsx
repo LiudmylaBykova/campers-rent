@@ -3,24 +3,14 @@ import Modal from "react-modal";
 import icon from "../../assets/icons.svg";
 import css from "../ModalWrapper/ModalWrapper.module.css";
 import CamperDetails from "../CamperDetails/CamperDetails";
-import { useDispatch, useSelector } from "react-redux";
-import { selectModalState } from "../../redux/modal/selector";
-import { closeModal } from "../../redux/modal/slice";
 
 Modal.setAppElement("#root");
 
-export default function ModalWrapper({ camper }) {
-  const dispatch = useDispatch();
-  const { isOpen } = useSelector(selectModalState);
-
-  const handleClose = () => {
-    dispatch(closeModal());
-  };
-
+export default function ModalWrapper({ isOpen, onClose, camper }) {
   return (
     <Modal
       isOpen={isOpen}
-      onRequestClose={handleClose}
+      onRequestClose={() => onClose()}
       shouldCloseOnEsc={true}
       shouldCloseOnOverlayClick={true}
       overlayClassName={css.overlay}
@@ -29,7 +19,7 @@ export default function ModalWrapper({ camper }) {
       <button
         type="button"
         className={css.modalCloseButton}
-        onClick={handleClose}
+        onClick={() => onClose()}
       >
         <svg className={css.icon} width="32" height="32">
           <use href={`${icon}#icon-close`}></use>

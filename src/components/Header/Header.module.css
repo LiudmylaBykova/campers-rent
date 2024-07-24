@@ -12,17 +12,11 @@
     gap: 20px;
 }
 
-.linkHome {
-    display: flex;
-    gap: 10px;
-    font-size: 26px;
-    font-weight: 700;
-    color: #E44848;
-    transition: all 0.3s ease-in-out;
+.linkHomeWrap {
     margin-right: auto;
 }
 
-.link {
+.navLink {
     position: relative;
     display: flex;
     gap: 10px;
@@ -32,9 +26,18 @@
     transition: all 0.3s ease-in-out;
 }
 
+.active {
+    border-bottom: 2px solid #E44848;
+}
 
-.link:hover,
-.link:focus {
+.active:hover,
+.active:focus {
+    border-bottom: 2px solid #cf2a2a;
+}
+
+
+.navLink:hover,
+.navLink:focus {
     color: #cf2a2a;
 }
 
@@ -66,7 +69,7 @@
 .amount {
     position: absolute;
     right: -12px;
-    color: #f19393;
+    color: #cf2a2a;
     font-size: 16px;
     font-weight: 500;
 }

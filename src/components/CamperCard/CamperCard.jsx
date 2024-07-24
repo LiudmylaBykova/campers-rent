@@ -6,7 +6,7 @@ import {
   addFavorites,
   deleteFavorites,
 } from "../../redux/campers/campersSlice";
-import { openModal } from "../../redux/modal/slice";
+// import { openModal } from "../../redux/modal/slice";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
 import FeaturesList from "../FeaturesList/FeaturesList";
 import icon from "../../assets/icons.svg";
@@ -15,6 +15,7 @@ import css from "../CamperCard/CamperCard.module.css";
 const CamperCard = ({ camper }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectCampersFavorites);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -31,8 +32,13 @@ const CamperCard = ({ camper }) => {
   };
 
   const showModal = () => {
-    dispatch(openModal());
+    setIsModalOpen(true);
   };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className={css.card}>
       <img
@@ -46,7 +52,7 @@ const CamperCard = ({ camper }) => {
       <div className={css.descriptionWrap}>
         <div className={css.nameWrap}>
           <h2 className={css.name}>{camper.name}</h2>
-          <p className={css.price}>€{camper.price}, 00</p>
+          <p className={css.price}>&#8364;{camper.price}, 00</p>
           <button
             className={css.likeBtn}
             type="button"
@@ -89,7 +95,7 @@ const CamperCard = ({ camper }) => {
           Show more
         </button>
       </div>
-      <ModalWrapper camper={camper} />
+      <ModalWrapper isOpen={isModalOpen} onClose={closeModal} camper={camper} />
     </div>
   );
 };

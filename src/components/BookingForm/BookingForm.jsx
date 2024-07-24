@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import { closeModal } from "../../redux/modal/slice";
 import { successToast } from "../../helpers/toast";
 import { bookingSchema } from "../../helpers/schemas";
 import icon from "../../assets/icons.svg";
-
 import css from "../BookingForm/BookingForm.module.css";
 
 const defaultValues = {
@@ -20,7 +17,6 @@ const defaultValues = {
 };
 
 const BookingForm = () => {
-  const dispatch = useDispatch();
   const [selectedDate, setSelectedDate] = useState(null);
   const {
     register,
@@ -37,7 +33,6 @@ const BookingForm = () => {
 
   const handleSearchBtnSubmit = (values) => {
     try {
-      dispatch(closeModal());
       successToast(
         "Your request was sussesfully sended! Our manager will connect with you!"
       );
