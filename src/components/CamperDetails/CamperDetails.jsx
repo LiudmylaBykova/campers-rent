@@ -19,14 +19,14 @@ const CamperDetails = ({ camper }) => {
         <div className={css.locationWrap}>
           <div className={css.reviewWrap}>
             <span className={css.reviews}>
-              <svg className={css.svg} width="24" height="24">
+              <svg className={css.svgStar} width="16" height="16">
                 <use href={`${icon}#icon-star`}></use>
               </svg>
               {camper.rating}({camper.reviews.length} Reviews)
             </span>
           </div>
           <span className={css.location}>
-            <svg width="16" height="16">
+            <svg width="10" height="10">
               <use href={`${icon}#icon-map`}></use>
             </svg>
             {camper.location}
@@ -43,7 +43,7 @@ const CamperDetails = ({ camper }) => {
                 src={item}
                 alt={camper.name}
                 width={290}
-                height={310}
+                height={300}
               />
             </div>
           </li>

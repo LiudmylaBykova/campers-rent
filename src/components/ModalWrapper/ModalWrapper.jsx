@@ -21,7 +21,7 @@ export default function ModalWrapper({ isOpen, onClose, camper }) {
         className={css.modalCloseButton}
         onClick={() => onClose()}
       >
-        <svg className={css.icon} width="32" height="32">
+        <svg className={css.icon} width="20" height="20">
           <use href={`${icon}#icon-close`}></use>
         </svg>
       </button>

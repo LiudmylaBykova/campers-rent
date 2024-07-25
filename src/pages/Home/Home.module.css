@@ -42,7 +42,7 @@
 .title {
     font-size: 24px;
     font-weight: 700;
-    color: #101828;
+    color: #fafafa;
     letter-spacing: -0.02em;
 
     @media screen and (min-width: 768px) {

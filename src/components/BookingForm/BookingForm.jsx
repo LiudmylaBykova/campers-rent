@@ -78,7 +78,7 @@ const BookingForm = () => {
               errors.date ? css.inputDatePickerError : css.inputDatePicker
             }
           />
-          <svg className={css.svgDatePicker} width="20" height="20">
+          <svg className={css.svgDatePicker} width="12" height="12">
             <use href={`${icon}#icon-calendar`}></use>
           </svg>
         </label>

@@ -87,9 +87,56 @@ const CamperCard = ({ camper }) => {
           </span>
         </div>
         <p className={css.description}>{camper.description}</p>
-        <div className={css.detailsWrap}>
-          <FeaturesList camper={camper} />
-        </div>
+        <ul className={css.featuresList}>
+          <li>
+            <span className={css.span}>
+              <svg className={css.listSvg} width="10" height="10">
+                <use href={`${icon}#icon-users`}></use>
+              </svg>
+              {camper.adults} Adults
+            </span>
+          </li>
+          <li>
+            <span className={css.span}>
+              <svg className={css.listSvg} width="10" height="10">
+                <use href={`${icon}#icon-automatic`}></use>
+              </svg>
+              {camper.transmission}
+            </span>
+          </li>
+          <li>
+            <span className={css.span}>
+              <svg className={css.listSvg} width="10" height="10">
+                <use href={`${icon}#icon-petrol`}></use>
+              </svg>
+              {camper.engine}
+            </span>
+          </li>
+          <li>
+            <span className={css.span}>
+              <svg className={css.listSvg} width="10" height="10">
+                <use href={`${icon}#icon-kitchen`}></use>
+              </svg>
+              Kitchen
+            </span>
+          </li>
+          <li>
+            <span className={css.span}>
+              <svg className={css.listSvg} width="10" height="10">
+                <use href={`${icon}#icon-bad`}></use>
+              </svg>
+              {camper.details.beds} Bads
+            </span>
+          </li>
+          <li>
+            <span className={css.span}>
+              <svg className={css.listSvg} width="10" height="10">
+                <use href={`${icon}#icon-wind`}></use>
+              </svg>
+              AC
+            </span>
+          </li>
+        </ul>
         <button className={css.showMoreBtn} onClick={showModal}>
           Show more
         </button>

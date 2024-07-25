@@ -35,6 +35,11 @@
 .icon {
     stroke: #2f2f2f;
     transition: 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .icon:hover,

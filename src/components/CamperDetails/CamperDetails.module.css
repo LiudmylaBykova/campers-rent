@@ -1,11 +1,17 @@
 .card {
-    width: 982px;
-    height: 720px;
-    padding: 40px;
+    width: 310px;
+    height: 520px;
+    padding: 10px;
     background-color: #fff;
     border: 1px solid #10182833;
     border-radius: 20px;
     overflow: scroll;
+
+    @media screen and (min-width: 768px) {
+        width: 982px;
+        height: 720px;
+        padding: 20px 10px;
+    }
 }
 
 .titleWrap {
@@ -13,20 +19,30 @@
 }
 
 .name {
+    max-width: 290px;
     color: #101828;
-    max-width: 339px;
     height: 30px;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25;
     margin-right: auto;
-    margin-bottom: 8px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 339px;
+        height: 30px;
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
 }
 
 .locationWrap {
     display: flex;
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 24px;
+    }
 }
 
 .reviewWrap {
@@ -35,39 +51,77 @@
 
 .reviews {
     color: #101828;
-    font-size: 16px;
+    font-size: 10px;
     line-height: 1.5;
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+.svgStar {
+    @media screen and (min-width: 768px) {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.svgLocation {
+    @media screen and (min-width: 768px) {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 .location {
     color: #101828;
-    font-size: 16px;
+    font-size: 10px;
     line-height: 1.5;
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 .price {
     color: #101828;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
 }
 
 .imgList {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
+    margin: 0 auto;
     margin-bottom: 44px;
+
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+    }
 }
 
 .imgWrap {
     width: 290px;
-    height: 310px;
+    height: 300px;
     border-radius: 10px;
     background-color: #475467;
+
+    @media screen and (min-width: 768px) {
+        width: 290px;
+        height: 310px;
+    }
 }
 
 .img {
@@ -78,9 +132,14 @@
 
 .description {
     color: #475467;
+    font-size: 10px;
     text-align: left;
-    margin-bottom: 24px;
-    overflow: scroll;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
 }
 
 .detailsWrap {
@@ -88,25 +147,39 @@
     align-items: start;
     gap: 40px;
     border-bottom: 1px solid #10182833;
-    margin-bottom: 44px;
+    margin-bottom: 22px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 44px;
+    }
 }
 
 .detailsInfo {
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: #101828;
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: transparent;
+
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+        padding: 20px 0;
+    }
 }
 
 .detailsInfoActive {
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: #101828;
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: transparent;
+
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+        padding: 20px 0;
+    }
 }
 
 .detailsInfoActive::after {
@@ -115,15 +188,25 @@
     right: 0;
     top: 95%;
     width: 100%;
-    height: 5px;
+    height: 3px;
     background-color: #E44848;
     content: "";
+
+    @media screen and (min-width: 768px) {
+        height: 5px;
+    }
 
 }
 
 .featuresContainer {
     display: flex;
-    width: 902px;
-    height: 532px;
-    gap: 24px;
+    flex-direction: column;
+    gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        width: 902px;
+        height: 532px;
+        gap: 24px;
+    }
 }
