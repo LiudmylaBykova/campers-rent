@@ -19,7 +19,7 @@ const SearchBar = () => {
   return (
     <div className={css.searchContainer}>
       <form className={css.form}>
-        <p className={css.location}> Location</p>
+        <p className={css.text}> Location</p>
         <div className={css.locationWrap}>
           <label>
             <input
@@ -33,7 +33,7 @@ const SearchBar = () => {
           </svg>
         </div>
         <div className={css.wrap}>
-          <p className={css.equipmantText}>Filters</p>
+          <p className={css.text}>Filters</p>
           <h2 className={css.title}>Vehicle equipment</h2>
 
           <ul className={css.list}>

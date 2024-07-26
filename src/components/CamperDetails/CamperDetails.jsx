@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Features from "../Features/Features";
 import Reviews from "../Reviews/Reviews";
 import BookingForm from "../BookingForm/BookingForm";
+import AspectRatio from "@mui/joy/AspectRatio";
 
 import icon from "../../assets/icons.svg";
 import css from "../CamperDetails/CamperDetails.module.css";
@@ -26,7 +27,7 @@ const CamperDetails = ({ camper }) => {
             </span>
           </div>
           <span className={css.location}>
-            <svg width="10" height="10">
+            <svg className={css.svgLocation} width="10" height="10">
               <use href={`${icon}#icon-map`}></use>
             </svg>
             {camper.location}
@@ -43,7 +44,7 @@ const CamperDetails = ({ camper }) => {
                 src={item}
                 alt={camper.name}
                 width={290}
-                height={300}
+                height={310}
               />
             </div>
           </li>
