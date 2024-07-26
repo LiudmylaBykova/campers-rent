@@ -4,6 +4,11 @@
     overflow: scroll;
 
     @media screen and (min-width: 768px) {
+        width: 347px;
+        height: 480px;
+    }
+
+    @media screen and (min-width: 1440px) {
         width: 448px;
         height: 532px;
     }
@@ -15,6 +20,10 @@
     gap: 16px;
 
     @media screen and (min-width: 768px) {
+        gap: 20px;
+    }
+
+    @media screen and (min-width: 1440px) {
         gap: 24px;
     }
 }
@@ -71,6 +80,10 @@
     color: #475467;
 
     @media screen and (min-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 1440px) {
         font-size: 16px;
     }
 }
@@ -80,6 +93,10 @@
     text-align: center;
 
     @media screen and (min-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: 1440px) {
         font-size: 16px;
     }
 }

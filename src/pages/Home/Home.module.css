@@ -4,9 +4,7 @@
     background-color: #F2F4F7;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-image: url(/public/home-bgr2.jpg);
-    /* background-image: url(home-bgr.jpg); */
+    background-image: url(/home-bgr.jpg);
 }
 
 .container {
@@ -76,6 +74,8 @@
 }
 
 .link {
+    display: flex;
+    justify-content: center;
     font-size: 10px;
     font-weight: 500;
     width: 90px;
