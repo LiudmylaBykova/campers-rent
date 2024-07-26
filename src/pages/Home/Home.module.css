@@ -5,7 +5,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(/public/home-bgr.jpg);
+    background-image: url(home-bgr2.jpg);
+    /* background-image: url(home-bgr.jpg); */
 }
 
 .container {
@@ -16,6 +17,7 @@
     display: flex;
     flex-direction: column;
     padding: 30px;
+    margin: 0 auto;
 
     @media screen and (min-width: 768px) and (max-width: 1439.98px) {
         min-width: 768px;
@@ -25,6 +27,7 @@
 
     @media screen and (min-width: 1440px) {
         min-width: 1440px;
+
     }
 }
 
