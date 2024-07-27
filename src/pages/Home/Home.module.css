@@ -57,6 +57,34 @@
     text-transform: uppercase;
 }
 
+.titleSpan {
+    display: inline-block;
+    width: 10ch;
+    height: 1.5em;
+    overflow: hidden;
+    vertical-align: top;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.titleSpan::before {
+    content: "";
+    float: right;
+    height: 100%;
+    margin-right: -1ch;
+    animation: shrink steps(10) 3s infinite;
+}
+
+@keyframes shrink {
+    from {
+        width: calc(100% + 1ch);
+    }
+
+    to {
+        width: 0;
+    }
+}
+
 .text {
     font-size: 10px;
     color: #E44848;
@@ -66,6 +94,7 @@
         font-weight: 500;
     }
 }
+
 
 .linkWrap {
     display: flex;
